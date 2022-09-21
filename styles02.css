@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* com os códigos acima conseguimos retirar espaços que o navegador implanta por padrão, chamamos de Reset de CSS */
+
+header {
+    padding-top: 12px;        /* espaçamento entre o topo da página */
+    height: calc(120px + 12px);
+}
+
+header div {
+    width: 120px;         /* tamanho da imagem */
+    margin: auto;         /* centralizar imagem */
+    background-image: linear-gradient(90deg, #dec9e9 10%, #dac3e8 20%, #d2b7e5 30%, #c19ee0 40%, #b185db 50%, #a06cd5 60%, #9163cb 70%, #815ac0 80%, #7251b5 90%, #6247aa 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;  /* templo do efeito na imagem */
+}
+
+header div:hover {
+    transform: scale(1.1);  /* efeito quando colocamos o mouse sob a imagem */
+}
+
+header img {
+    width: 112px;           /* tamanho da imagem referente a div */
+    border-radius: 50%;     /* utilizado para arredondar a imagem */
+}
+
+ul {
+    list-style: none; /* utilizamos esse código para retirar o pontilhado em formato de lista */
+}
+
+body {
+    background-image: url(./assets/bg02.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Acima podemos ver que o atributo background-image é usado para selecionarmos uma imagem em nossa pasta.
+background-position: top center; é utilizado para iniciarmos a imagem no topo e centralizarmos ela no meio da página.
+background-size: 100% auto; utilizamos o 100% para a imagem se adaptar 100% na lateral do navegador quando diminuimos o tamanho do browser, e o AUTO para automatico na altura.
+background-repeat: no-repeat; utilizamos para a imagem que escolhemos não se repetir.
+background-color: #121214; coloração restante da página após o fim da imagem. */
+
+body * {
+    font-family: 'Inter', sans-serif; /* Aqui estamos de fato adicionando a fonte selecionada */
+    line-height: 160%;
+}
+
+main {
+    max-width: 580px;               /* tamanho do cartão em px */
+    width: 90%;                     /* 90% referente ao tamanho da tela */
+    margin: 12px auto;              /* centralizar os tópicos no meio */
+    display: grid;
+    gap: 20px;
+}
+
+section {
+    color: #dec9e9; /* coloração da fonte */
+    background-image: linear-gradient(90deg, #dec9e9 10%, #dac3e8 20%, #d2b7e5 30%, #c19ee0 40%, #b185db 50%, #a06cd5 60%, #9163cb 70%, #815ac0 80%, #7251b5 90%, #6247aa 100%);
+    padding: 4px;
+    border-radius: 12px;
+
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    letter-spacing: -0.47px; /* espaço entre as letras */
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: white;       /* coloração do texto dentro da Tag P */
+    padding-bottom: 6px;
+}
+
+section ul {
+    display: flex;    /* Utilizamos para colocar as imagens dentro da UL uma do lado da outra */
+    gap: 16px;        /* espaçamento entre uma imagem e outra */
+    margin-top: 2px;  /* espaço entre os cartões */
+}
+
+section ul li {
+    transition: transform .3s;
+
+}
+
+section ul li:hover {
+    transform: scale(1.1); 
+    
+}
+
+
+.series-list img {
+    width: 90px;         /* tamanho das imagens */
+    border-radius: 8px;  /* bordas arredondadas nas imagens das séries */
+    border: 2px solid #9381ff;
+}
+
+.movies-list img {
+    width: 90px;
+    border-radius: 8px;
+    border: 2px solid #9381ff;
+}
+
+.social-list {
+    display: block;
+    margin-bottom: -14px;
+}
+
+
+
+/* ANIMATION */
+
+header div {
+    animation: fromTop .7s .2s backwards;   
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
