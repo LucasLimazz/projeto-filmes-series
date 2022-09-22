@@ -6,6 +6,29 @@
 
 /* com os códigos acima conseguimos retirar espaços que o navegador implanta por padrão, chamamos de Reset de CSS */
 
+ul {
+    list-style: none; /* utilizamos esse código para retirar o pontilhado em formato de lista */
+}
+
+body {
+    background-image: url(./assets/bg.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #121214;
+}
+
+/* Acima podemos ver que o atributo background-image é usado para selecionarmos uma imagem em nossa pasta.
+background-position: top center; é utilizado para iniciarmos a imagem no topo e centralizarmos ela no meio da página.
+background-size: 100% auto; utilizamos o 100% para a imagem se adaptar 100% na lateral do navegador quando diminuimos o tamanho do browser, e o AUTO para automatico na altura.
+background-repeat: no-repeat; utilizamos para a imagem que escolhemos não se repetir.
+background-color: #121214; coloração restante da página após o fim da imagem. */
+
+body * {
+    font-family: 'Inter', sans-serif; /* Aqui estamos de fato adicionando a fonte selecionada */
+    line-height: 160%;
+}
+
 header {
     padding-top: 12px;        /* espaçamento entre o topo da página */
     height: calc(120px + 12px);
@@ -28,28 +51,6 @@ header div:hover {
 header img {
     width: 112px;           /* tamanho da imagem referente a div */
     border-radius: 50%;     /* utilizado para arredondar a imagem */
-}
-
-ul {
-    list-style: none; /* utilizamos esse código para retirar o pontilhado em formato de lista */
-}
-
-body {
-    background-image: url(./assets/bg.jpg); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-/* Acima podemos ver que o atributo background-image é usado para selecionarmos uma imagem em nossa pasta.
-background-position: top center; é utilizado para iniciarmos a imagem no topo e centralizarmos ela no meio da página.
-background-size: 100% auto; utilizamos o 100% para a imagem se adaptar 100% na lateral do navegador quando diminuimos o tamanho do browser, e o AUTO para automatico na altura.
-background-repeat: no-repeat; utilizamos para a imagem que escolhemos não se repetir.
-background-color: #121214; coloração restante da página após o fim da imagem. */
-
-body * {
-    font-family: 'Inter', sans-serif; /* Aqui estamos de fato adicionando a fonte selecionada */
-    line-height: 160%;
 }
 
 main {
